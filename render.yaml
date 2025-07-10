@@ -1,7 +1,7 @@
 services:
   - type: web
     name: football-predictor-backend
-    runtime: docker
-    dockerfilePath: Dockerfile
-    buildCommand: docker build -t football-predictor .
-    startCommand: docker run -p 5000:5000 football-predictor
+    runtime: python
+    pythonVersion: "3.9.13"  # Must use Python 3.9
+    buildCommand: chmod +x build.sh && ./build.sh
+    startCommand: gunicorn app:app
