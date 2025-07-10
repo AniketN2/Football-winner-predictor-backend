@@ -1,9 +1,4 @@
 services:
   - type: web
     name: football-predictor-backend
-    runtime: python
-    pythonVersion: "3.8.16"
-    buildCommand: |
-      python -m pip install --upgrade pip
-      pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    runtime: docker
