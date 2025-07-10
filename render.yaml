@@ -1,4 +1,0 @@
-services:
-  - type: web
-    name: football-predictor-backend
-    runtime: docker
