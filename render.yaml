@@ -2,6 +2,6 @@ services:
   - type: web
     name: football-predictor-backend
     runtime: python
-    pythonVersion: "3.9.13"  # Must use Python 3.9
-    buildCommand: chmod +x build.sh && ./build.sh
+    pythonVersion: "3.9.13"
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: gunicorn app:app
