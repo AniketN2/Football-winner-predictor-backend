@@ -2,6 +2,6 @@ services:
   - type: web
     name: football-predictor-backend
     runtime: python
-    pythonVersion: "3.8.16"  # Explicitly specify Python 3.8
+    pythonVersion: "3.9.13" # Explicitly specify Python 3.8
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
